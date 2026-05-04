@@ -148,6 +148,7 @@ FROM instructor
 ORDER BY salary ASC;
 
 -- v) Delete all instructors with a salary between $13,000 and $15,000. 
+set sql_safe_updates=0;
 DELETE FROM instructor
 WHERE salary BETWEEN 13000 AND 15000;
 
@@ -173,4 +174,4 @@ WHERE c.dept_name = 'Physics'
 AND s.semester = 'Fall'
 AND s.year = 2017
 AND s.building = 'Watson Building';
-
+SELECT * FROM physics_fall_2017;
